@@ -17,6 +17,7 @@ locals {
   
   tg_port = "${var.component}" == "frontend" ? 80 : 8080
   health_check_path = "${var.component}" == "frontend" ? "/" : "/health"
+  
   common_tags = {
     Project = var.project
     Environment = var.environment
